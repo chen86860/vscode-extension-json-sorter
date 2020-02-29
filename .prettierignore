@@ -1,0 +1,6 @@
+**/*.md
+**/*.svg
+**/*.html
+/build
+/.cache
+/node_modules

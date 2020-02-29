@@ -1,33 +1,40 @@
 {
-	"name": "hello-jack",
-	"displayName": "hello-jack",
-	"description": "",
+	"name": "json-sorter",
+	"displayName": "JSON Sorter",
+	"description": "VSCode extension for sort the JSON files",
+	"keywords": [
+		"vscode",
+		"vscode-extension",
+		"JSON sorter"
+	],
 	"version": "0.0.1",
+	"icon": "https://i.loli.net/2020/02/29/whpoA5QfSOmrcHU.png",
 	"engines": {
-		"vscode": "^1.42.0"
+		"vscode": "^1.30.0"
 	},
 	"categories": [
 		"Other"
 	],
+	"license": "MIT",
 	"activationEvents": [
-		"onCommand:extension.helloJack",
-		"onCommand:extension.helloTest"
+		"onCommand:extension.jsonSorter",
+		"onCommand:extension.jsonSorterDesc"
 	],
 	"publisher": "chen86860",
 	"main": "./out/extension.js",
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:chen86860/vscode-extension-hello-world.git"
+		"url": "https://github.com/chen86860/vscode-extension-json-sorter"
 	},
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloJack",
-				"title": "Hello Jack"
+				"command": "extension.jsonSorter",
+				"title": "JSON sorter ASC"
 			},
 			{
-				"command": "extension.helloTest",
-				"title": "Test"
+				"command": "extension.jsonSorterDesc",
+				"title": "JSON sorter DESC"
 			}
 		]
 	},
@@ -44,12 +51,13 @@
 		"@types/mocha": "^7.0.1",
 		"@types/node": "^12.11.7",
 		"@types/vscode": "^1.42.0",
-		"eslint": "^6.8.0",
-		"@typescript-eslint/parser": "^2.18.0",
 		"@typescript-eslint/eslint-plugin": "^2.18.0",
+		"@typescript-eslint/parser": "^2.18.0",
+		"eslint": "^6.8.0",
 		"glob": "^7.1.6",
 		"mocha": "^7.0.1",
 		"typescript": "^3.7.5",
 		"vscode-test": "^1.3.0"
-	}
+	},
+	"dependencies": {}
 }
