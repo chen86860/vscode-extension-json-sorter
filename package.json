@@ -7,7 +7,7 @@
 		"vscode-extension",
 		"JSON sorter"
 	],
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"icon": "assets/img/json-sorter.png",
 	"engines": {
 		"vscode": "^1.42.0"
@@ -36,7 +36,13 @@
 				"command": "extension.jsonSorterDesc",
 				"title": "JSON sorter DESC"
 			}
-		]
+		],
+		"keybindings": {
+			"command": "extension.jsonSorter",
+			"key": "ctrl+shift+j",
+			"mac": "cmd+shift+j",
+			"when": "editorTextFocus"
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "yarn run compile",
