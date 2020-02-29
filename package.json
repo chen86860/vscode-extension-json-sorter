@@ -8,9 +8,9 @@
 		"JSON sorter"
 	],
 	"version": "0.0.1",
-	"icon": "https://i.loli.net/2020/02/29/whpoA5QfSOmrcHU.png",
+	"icon": "assets/img/json-sorter.png",
 	"engines": {
-		"vscode": "^1.30.0"
+		"vscode": "^1.42.0"
 	},
 	"categories": [
 		"Other"
