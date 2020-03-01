@@ -21,7 +21,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn
       - run: yarn deploy -p ${{ secrets.VSCE_TOKEN }}
-      - run: yarn package -p ${{ secrets.VSCE_TOKEN }}
+      - run: yarn package
       - name: Upload extension package file
         uses: actions/upload-artifact@v1
         with:

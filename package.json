@@ -52,8 +52,7 @@
 		"pretest": "yarn run compile && yarn run lint",
 		"test": "node ./out/test/runTest.js",
 		"deploy": "vsce publish --yarn",
-		"package": "vsce package --yarn",
-		"name": "echo $npm_package_name"
+		"package": "vsce package --yarn"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
