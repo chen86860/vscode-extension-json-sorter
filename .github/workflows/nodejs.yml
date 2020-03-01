@@ -23,8 +23,8 @@ jobs:
       - run: yarn deploy -p ${{ secrets.VSCE_TOKEN }}
       - run: yarn package -p ${{ secrets.VSCE_TOKEN }}
 
-      - name: Upload extension package file
       - uses: actions/upload-artifact@v1
+      - name: Upload extension package file
         with:
           name: json-sorter-${{ env.GITHUB_REF }}
           path: json-sorter-${{ env.GITHUB_REF }}.vsix
