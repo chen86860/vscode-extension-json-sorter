@@ -17,7 +17,9 @@ jobs:
       - run: echo json-sorter-1${{ github.ref }}
       - run: echo json-sorter-2${{ github.head_ref }}
       - run: echo json-sorter-3${{ github.base_ref }}
-      - run: echo json-sorter-6${GITHUB_EVENT_NAME}
+      - run: echo json-sorter-7${GITHUB_REF}
+      - run: echo json-sorter-8$(echo ${{ github.ref }})
+      - run: echo json-sorter-9$(echo ${GITHUB_REF:10})
       # - uses: actions/checkout@v2
       # - name: Use Node.js ${{ matrix.node-version }}
       # uses: actions/setup-node@v1
