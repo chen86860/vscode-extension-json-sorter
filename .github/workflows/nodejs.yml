@@ -19,10 +19,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: yarn
-      - run: yarn deploy -p ${{ secrets.VSCE_TOKEN }}
-      - run: yarn package
+      # - run: yarn
+      # - run: yarn deploy -p ${{ secrets.VSCE_TOKEN }}
+      # - run: yarn package
       - uses: actions/upload-artifact@v1
         with:
-          name: json-sorter-${GITHUB_EVENT_NAME}
-          path: json-sorter-${GITHUB_EVENT_NAME}.vsix
+          name: "json-sorter-${GITHUB_EVENT_NAME}"
+          path: "json-sorter-${GITHUB_EVENT_NAME}.vsix"
