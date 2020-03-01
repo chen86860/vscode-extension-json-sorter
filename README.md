@@ -3,7 +3,6 @@
 </p>
 
 # JSON Sorter
-![Deploy VSCode extension](https://github.com/chen86860/vscode-extension-json-sorter/workflows/Deploy%20VSCode%20extension/badge.svg)
 
 A tools that help you sort JSON files quickly.
 
