@@ -14,16 +14,15 @@ jobs:
         node-version: [12.x]
 
     steps:
-      - run: echo json-sorter-$(echo ${GITHUB_REF:11})
-      # - uses: actions/checkout@v2
-      # - name: Use Node.js ${{ matrix.node-version }}
-      # uses: actions/setup-node@v1
-      # with:
-      # node-version: ${{ matrix.node-version }}
-      # - run: yarn
-      # - run: yarn deploy -p ${{ secrets.VSCE_TOKEN }}
-      # - run: yarn package
-      # - uses: actions/upload-artifact@v1
-      # with:
-      # name: json-sorter-${{ github.ref }}
-      # path: json-sorter-${{ github.ref }}.vsix
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: yarn
+      - run: yarn deploy -p ${{ secrets.VSCE_TOKEN }}
+      - run: yarn package
+      - uses: actions/upload-artifact@v1
+        with:
+          name: json-sorter-$(echo ${GITHUB_REF:10})
+          path: json-sorter-$(echo ${GITHUB_REF:11}).vsix
