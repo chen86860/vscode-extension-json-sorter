@@ -7,7 +7,7 @@
 		"vscode-extension",
 		"JSON sorter"
 	],
-	"version": "0.0.4",
+	"version": "0.0.12",
 	"icon": "assets/img/json-sorter.png",
 	"engines": {
 		"vscode": "^1.42.0"
@@ -51,7 +51,8 @@
 		"watch": "tsc -watch -p ./",
 		"pretest": "yarn run compile && yarn run lint",
 		"test": "node ./out/test/runTest.js",
-		"deploy": "vsce publish --yarn"
+		"deploy": "vsce publish --yarn",
+		"package": "vsce package --yarn"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
