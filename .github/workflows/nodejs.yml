@@ -24,5 +24,5 @@ jobs:
       # - run: yarn package
       - uses: actions/upload-artifact@v1
         with:
-          name: json-sorter-${{ github.event_name }}
-          path: json-sorter-${{ github.event_name }}.vsix
+          name: json-sorter-${{ github.ref }}
+          path: json-sorter-${{ github.ref }}.vsix
