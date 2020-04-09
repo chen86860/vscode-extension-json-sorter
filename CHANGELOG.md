@@ -1,5 +1,9 @@
 # Change Log
 
+### 0.0.14 (Apr 9, 2020)
+
+- Add File type(`JSON/JSONC`) checking
+
 ### 0.0.13 (Mar 5, 2020)
 
 - Replace `JSON` with [jju](https://github.com/rlidwka/jju) to format document.
