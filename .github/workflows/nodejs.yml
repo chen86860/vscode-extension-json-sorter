@@ -1,6 +1,7 @@
 name: Deploy VSCode extension
 
 on:
+  push:
   create:
     tags:
       - v*
@@ -8,6 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: "contains(github.event.commits[0].message, 'release')"
 
     strategy:
       matrix:
