@@ -17,7 +17,27 @@ const sorter = (json: string, desc?: boolean): object => {
     const data = JSON5.parse(json)
     const result = Object.keys(data)
       .map((key) => key)
-      .sort((a, b) => (a.charCodeAt(0) - b.charCodeAt(0)) * (desc ? -1 : 1))
+      .sort((a, b) => {
+        const seed = desc ? -1 : 1
+
+        let chartIndex = 0
+        let diffOfCharCode = a.charCodeAt(chartIndex) - b.charCodeAt(chartIndex)
+        while (diffOfCharCode === 0) {
+          chartIndex += 1
+          if (Number.isNaN(a.charCodeAt(chartIndex))) {
+            diffOfCharCode = -1
+            break
+          }
+          if (Number.isNaN(b.charCodeAt(chartIndex))) {
+            diffOfCharCode = 1
+            break
+          }
+          diffOfCharCode = a.charCodeAt(chartIndex) - b.charCodeAt(chartIndex)
+          if (diffOfCharCode !== 0) break
+        }
+
+        return seed * diffOfCharCode
+      })
       .reduce((prev: any, curr: any) => {
         const key = curr
         const value = data[key]
