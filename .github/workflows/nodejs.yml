@@ -1,14 +1,12 @@
 name: Deploy VSCode extension
 
 on:
-  push:
   create:
     tags:
       - v*
 
 jobs:
   build:
-    if: "contains(github.event.head_commit.message, 'release')"
     runs-on: ubuntu-latest
 
     strategy:
@@ -23,10 +21,3 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn
       - run: yarn deploy -p ${{ secrets.VSCE_TOKEN }}
-      # - run: yarn package
-      # - uses: actions/upload-artifact@v1
-      #   with:
-      #     name: json-sorter-v${{ TAG_NAME }}
-      #     path: json-sorter-${{ TAG_NAME }}.vsix
-      #   env:
-      #     TAG_NAME: echo ${GITHUB_REF:11}
