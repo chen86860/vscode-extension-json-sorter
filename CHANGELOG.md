@@ -1,5 +1,9 @@
 # Changelog
 
+### 0.0.16 (Jul 10, 2021)
+
+- Fix sorting problem while string with the same of starting [#5](https://github.com/chen86860/vscode-extension-json-sorter/issues/5)
+
 ### 0.0.14 (Apr 9, 2020)
 
 - Add File type(`JSON/JSONC`) checking
