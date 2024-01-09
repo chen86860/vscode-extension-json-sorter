@@ -7,7 +7,7 @@
 		"vscode-extension",
 		"JSON sorter"
 	],
-	"version": "0.0.17",
+	"version": "0.0.18",
 	"icon": "assets/img/json-sorter.png",
 	"engines": {
 		"vscode": "^1.42.0"
@@ -71,5 +71,6 @@
 	},
 	"dependencies": {
 		"jju": "^1.4.0"
-	}
+	},
+	"pricing": "Free"
 }
